@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme{
+      --color-primary: #272757;
+  --color-secondary: #3b82f6;
+}
+
+
+@layer components {
+  .btn-gradient {
+    @apply bg-linear-to-r from-secondary to-primary 
+           text-white px-6 py-2 rounded-lg;
+  }
+   .text-gradient {
+    @apply bg-linear-to-r from-secondary to-primary 
+           bg-clip-text text-transparent;
+  }
+
+  .color-gradient{
+    @apply bg-linear-to-r from-secondary to-primary
+  }
+}
