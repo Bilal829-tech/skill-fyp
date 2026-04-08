@@ -16,7 +16,5 @@
            bg-clip-text text-transparent;
   }
 
-  .color-gradient{
-    @apply bg-linear-to-r from-secondary to-primary
-  }
+
 }
