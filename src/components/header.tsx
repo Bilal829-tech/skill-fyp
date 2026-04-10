@@ -34,7 +34,7 @@ function Header() {
             className="btn-gradient text-center"
             onClick={() => setMenuOpen(false)}
           >
-            Sign in
+          Login
           </Link>
           <Link
             to="/signUp"

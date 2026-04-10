@@ -61,13 +61,13 @@ const features = [
 
     <span className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
       <Link
-        to="/signup"
+        to="/signUp"
         className="flex justify-center items-center gap-1 btn-gradient"
       >
         Start Learning Today <ArrowRight size={18} />
       </Link>
       <Link to="/login" className="btn-gradient text-center">
-        Sign In
+        Login
       </Link>
     </span>
 

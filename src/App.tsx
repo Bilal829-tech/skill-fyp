@@ -1,5 +1,5 @@
 // import Home from "./pages/home.tsx"
-import SignUp from "./pages/signUp.tsx"
+import Login from "./pages/Login.tsx"
 
 function App() {
 
@@ -8,7 +8,7 @@ function App() {
     <>
 
   {/* <Home />    */}
-  <SignUp /> 
+  <Login /> 
     </>
 
   )
