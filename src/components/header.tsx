@@ -12,7 +12,7 @@ function Header() {
         </div>
         <div className="hidden sm:flex gap-4 items-center">
           <Link to="/Login" className="btn-gradient">Sign in</Link>
-          <Link to="/signIn" className="btn-gradient flex gap-2 items-center">
+          <Link to="/signup" className="btn-gradient flex gap-2 items-center">
             Explore Opportunities <ArrowRight size={16} />
           </Link>
         </div>
@@ -36,13 +36,13 @@ function Header() {
           >
           Login
           </Link>
-          <Link
-            to="/signUp"
-            className="btn-gradient flex justify-center gap-2 items-center"
-            onClick={() => setMenuOpen(false)}
-          >
-            Explore Opportunities <ArrowRight size={16} />
-          </Link>
+           <Link
+        to="/signup"
+        className="flex justify-center items-center gap-1 btn-gradient"
+      >
+        Explore Opportunities <ArrowRight size={18} />
+      </Link>
+         
         </div>
       )}
     </div>

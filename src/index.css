@@ -11,6 +11,9 @@
     @apply bg-linear-to-r from-secondary to-primary 
            text-white px-6 py-2 rounded-lg;
   }
+  .btn-gradient-outline {
+    @apply text-secondary px-6 py-2 rounded-lg border-2 border-secondary hover:bg-linear-to-r hover:from-secondary hover:to-primary hover:text-white transition-all duration-300 ease-in-out;
+  }
    .text-gradient {
     @apply bg-linear-to-r from-secondary to-primary 
            bg-clip-text text-transparent;

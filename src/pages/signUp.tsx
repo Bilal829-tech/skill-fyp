@@ -75,7 +75,7 @@ function SignUp() {
     }
 
     return (
-        <div className="min-h-screen bg-linear-to-r from-white to-secondary/40 backdrop-blur-lg p-10">
+        <div className="bg-linear-to-r from-white to-secondary/40 backdrop-blur-lg p-10">
             <div className="w-full  flex justify-center items-center my-20 ">
                 <form onSubmit={handleSubmit}>
                     <div className="flex flex-col gap-5 min-h-screen w-full md:w-md mx-auto p-6 bg-white border-2 border-primary/40 hover:border-secondary rounded-xl shadow-lg shadow-primary  ">

@@ -40,7 +40,7 @@ function Footer() {
             </div>
           </div>
           <div className="border-t-2 border-primary mt-8 pt-8 text-center text-gray-500">
-            <p>&copy; 2024 Skill Barter. All rights reserved.</p>
+            <p>&copy; 2026 Skill Swapper. All rights reserved.</p>
           </div>
         </div>
       </footer>
