@@ -7,6 +7,7 @@ function SignUp() {
         firstName: "",
         lastName: "",
         email: "",
+        phoneNumber: "",
         password: "",
         confirmPassword: "",
         bio: "",
@@ -91,7 +92,7 @@ function SignUp() {
                             </Link>
                         </div>
                                 <div className="flex flex-col md:flex-row gap-2 border-0">
-                            <div className="flex flex-col sm:w-full md:w-1/2 ">
+                            <div className="flex flex-col sm:w-full md:w-1/2 gap-2">
                                 <label htmlFor="firstname">First Name</label>
                                 <input
                                     type="text"
@@ -105,7 +106,7 @@ function SignUp() {
                                     className="border-2 border-primary/40 hover:border-secondary rounded-xl p-1.5"
                                 />
                             </div>
-                            <div className="flex flex-col sm:w-full md:w-1/2 ">
+                            <div className="flex flex-col sm:w-full md:w-1/2 gap-2">
                                 <label htmlFor="lastname">Last Name</label>
                                 <input
                                     type="text"
@@ -159,6 +160,19 @@ function SignUp() {
                             required
                             placeholder="Confirm your password"
                             value={form.confirmPassword}
+                            onChange={handleChange}
+                            className="border-2 border-primary/40 hover:border-secondary rounded-xl p-1.5"
+                        />
+
+                        <label htmlFor="phoneNumber">Phone Number</label>
+                        <input
+                            type="tel"
+                            name="phoneNumber"
+                            id="phoneNumber"
+                            autoComplete="tel"
+                            required
+                            placeholder="Enter your phone number"
+                            value={form.phoneNumber}
                             onChange={handleChange}
                             className="border-2 border-primary/40 hover:border-secondary rounded-xl p-1.5"
                         />
