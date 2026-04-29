@@ -6,8 +6,7 @@
 // import Profile from "./pages/profile.tsx"
 // import Skills from "./pages/skills.tsx"
 // import Users from "./pages/users.tsx" 
- import Skills from "./pages/skills.tsx"
-
+import SwapDetail from "./pages/SwapDetail.tsx"
 
 function App() {
   return (
@@ -21,7 +20,7 @@ function App() {
     //   <Route path="/swaps" element={<Swaps />} />
     //   <Route path="/users" element={<Users />} />
     // </Routes>
-    <Skills />
+    <SwapDetail />
 
   )
 }

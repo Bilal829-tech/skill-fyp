@@ -9,18 +9,10 @@ interface Skill {
   description: string;
 }
 
-interface UserSkill {
-  skillId: string;
-}
-
-interface User {
-  userSkills: UserSkill[];
-}
-
 const dummySkills: Skill[] = [
   { id: '1', name: 'JavaScript', category: 'Programming', isCustom: false, description: 'High-level, often just-in-time compiled language that conforms to the ECMAScript standard.' },
   { id: '2', name: 'React', category: 'Programming', isCustom: false, description: 'A JavaScript library for building user interfaces.' },
-  { id: '3', name: 'Node.js', category: 'Programming', isCustom: true, description: 'JavaScript runtime built on Chrome\'s V8 JavaScript engine.' },
+  { id: '3', name: 'Node.js', category: 'Programming', isCustom: false, description: 'JavaScript runtime built on Chrome\'s V8 JavaScript engine.' },
   { id: '4', name: 'Python', category: 'Programming', isCustom: false, description: 'An interpreted, high-level and general-purpose programming language.' },
   { id: '5', name: 'Graphic Design', category: 'Design', isCustom: false, description: 'The art or skill of combining text and pictures in advertisements, magazines, or books.' },
   { id: '6', name: 'UI/UX Design', category: 'Design', isCustom: false, description: 'User interface and user experience design.' },
@@ -29,6 +21,13 @@ const dummySkills: Skill[] = [
   { id: '9', name: 'Public Speaking', category: 'Communication', isCustom: true, description: 'The process or act of performing a speech to a live audience.' },
 ];
 
+interface UserSkill {
+  skillId: string;
+}
+
+interface User {
+  userSkills: UserSkill[];
+}
 const dummyUser: User = {
   userSkills: [{ skillId: '1' }, { skillId: '2' }, { skillId: '5' }]
 };
