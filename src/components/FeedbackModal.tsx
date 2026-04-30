@@ -48,30 +48,30 @@ const FeedbackModal = ({ isOpen, swap, currentUser, onClose, onSuccess }: Feedba
 
   return (
     <>
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+    <div className="fixed inset-0 bg-secondary/10 flex items-center justify-center z-50 p-4 mt-20">
       <div className="bg-white rounded-lg shadow-xl w-full max-w-md max-h-[90vh] overflow-y-auto">
         {/* Header */}
-        <div className="flex items-center justify-between p-6 border-b border-gray-200">
+        <div className="flex items-center justify-between p-6 border-b-2 border-secondary">
           <div className="flex items-center space-x-3">
             <MessageSquare className="w-6 h-6 text-blue-600" />
-            <h3 className="text-lg font-semibold text-gray-900">Give Feedback</h3>
+            <h3 className="text-lg font-semibold text-gradient">Give Feedback</h3>
           </div>
           <button
             onClick={handleClose}
-            className="text-gray-400 hover:text-gray-600 transition-colors"
+            className="text-gray-400 hover:text-gray-600 "
           >
             <X className="w-5 h-5" />
           </button>
         </div>
 
         {/* Swap Info */}
-        <div className="p-6 border-b border-gray-200">
+        <div className="p-6 border-b-2 border-secondary">
           <div className="flex items-center space-x-3 mb-4">
-            <div className="w-10 h-10 bg-secondary/5 rounded-full flex items-center justify-center text-white font-semibold">
+            <div className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-white font-semibold">
              <User/>
             </div>
             <div>
-              <h4 className="font-semibold text-gray-900">
+              <h4 className="font-semibold text-gradient">
                 {otherUser?.firstName || 'Unknown'} {otherUser?.lastName || 'User'}
               </h4>
               <p className="text-sm text-gray-600">
@@ -98,8 +98,8 @@ const FeedbackModal = ({ isOpen, swap, currentUser, onClose, onSuccess }: Feedba
           </div>
 
           {swap.completedAt && (
-            <div className="flex items-center mt-3 text-sm text-gray-600">
-              <Calendar className="w-4 h-4 mr-1" />
+            <div className="flex gap-2 items-center mt-3 text-sm text-gradient">
+              <Calendar className="w-4 h-4 " />
               <span>Completed on {new Date(swap.completedAt).toLocaleDateString()}</span>
             </div>
           )}
@@ -110,7 +110,7 @@ const FeedbackModal = ({ isOpen, swap, currentUser, onClose, onSuccess }: Feedba
           <div className="space-y-6">
              {/* rating */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-3">
+              <label className="block text-md font-medium text-gradient mb-3">
                 How would you rate this experience?
               </label>
               <div className="flex items-center justify-center space-x-2">
@@ -135,14 +135,14 @@ const FeedbackModal = ({ isOpen, swap, currentUser, onClose, onSuccess }: Feedba
 
             {/* Comment */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label className="block text-md font-medium text-gradient mb-2">
                 Share your experience
               </label>
               <textarea
                 value={feedbackForm.comment}
                 onChange={(e) => setFeedbackForm({ ...feedbackForm, comment: e.target.value })}
                 rows={4}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                className="w-full px-3 py-2 border-2 border-secondary rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 placeholder="Tell us about your experience with this skill exchange. What went well? What could be improved?"
                 maxLength={500}
               />
@@ -161,14 +161,14 @@ const FeedbackModal = ({ isOpen, swap, currentUser, onClose, onSuccess }: Feedba
           <div className="flex space-x-3 mt-6">
             <button
               onClick={handleClose}
-              className="flex-1 px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50 transition-colors"
+              className="flex-1 btn-gradient-outline"
             >
               Cancel
             </button>
             <button
               onClick={handleSubmit}
               disabled={!feedbackForm.comment.trim() || submitting}
-              className="flex-1 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="flex-1 btn-gradient disabled:cursor-not-allowed"
             >
               {submitting ? 'Submitting...' : 'Submit Feedback'}
             </button>
