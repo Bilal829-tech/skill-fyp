@@ -6,7 +6,7 @@ interface FeedbackModalProps {
   swap: any;
   currentUser: any;
   onClose: () => void;
-  onSuccess?: () => void;
+  onSuccess?: (feedback: { rating: number; comment: string }) => void;
 }
 
 const FeedbackModal = ({ isOpen, swap, currentUser, onClose, onSuccess }: FeedbackModalProps) => {
@@ -18,7 +18,7 @@ const FeedbackModal = ({ isOpen, swap, currentUser, onClose, onSuccess }: Feedba
   const handleSubmit = async () => {
     setSubmitting(true);
     try {
-      if (onSuccess) await onSuccess();
+      if (onSuccess) await onSuccess(feedbackForm);
       onClose();
     } catch (error) {
       console.error(error);
@@ -28,7 +28,7 @@ const FeedbackModal = ({ isOpen, swap, currentUser, onClose, onSuccess }: Feedba
   };
 
   const handleClose = () => {
-    setFeedbackForm({ rating: 5, comment: '' });
+    setFeedbackForm({ rating: 5, comment: `` });
     onClose();
   };
 

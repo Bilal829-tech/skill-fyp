@@ -28,7 +28,7 @@ const SwapDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   // Dummy user
-  const user = { id: '1', firstName: 'Bilal', lastName: 'Ahmed' };
+  const user = { id: '1', firstName: 'Bilal', lastName: 'Mustafa' };
   const [swap, setSwap] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [updating, setUpdating] = useState(false);
@@ -117,17 +117,17 @@ const SwapDetail = () => {
     }, 500);
   };
 
-  const handleFeedbackSuccess = () => {
+  const handleFeedbackSuccess = (feedbackData?: { rating: number; comment: string }) => {
     setShowFeedbackModal(false);
     setCanGiveFeedback(false);
     setSwapFeedback([
       {
-        id: '1',
+        id: Date.now().toString(),
         giverId: user.id,
-        name: `$ {user.firstName} ${user.lastName}`,
-        rating: 5,
+        name: `${user.firstName} ${user.lastName}`,
+        rating: feedbackData?.rating || 5,
         date: new Date().toLocaleDateString(),
-        review: 'Great experience!'
+        review: feedbackData?.comment || ''
       }
     ]);
     toast.success('Feedback submitted!');
@@ -429,6 +429,11 @@ const SwapDetail = () => {
                 <FeedbackDisplay 
                   feedback={swapFeedback}
                   currentUserId={user?.id || '1'}
+                  onDelete={(id) => {
+                    setSwapFeedback(prev => prev.filter(f => f.id !== id));
+                    setCanGiveFeedback(true);
+                    toast.success('Feedback deleted!');
+                  }}
                 />
               ) : (
                 <div className="text-center py-8">

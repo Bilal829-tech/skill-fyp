@@ -112,7 +112,7 @@ export default function Profile() {
         <div className="rounded-xl border-2 border-secondary shadow-2xl p-10">
 
           {/* Header Image Section */}
-          <div className='flex items-center gap-2 py-4'>
+          <div className='flex flex-col gap-4 md:flex-row items-center md:gap-2 py-4'>
             <div>
               <User className='text-blue-600 bg-blue-50 p-4 w-20 h-20 rounded-full' />
             </div>
@@ -122,7 +122,7 @@ export default function Profile() {
                 <MapPin className='text-secondary w-6 h-6' />{currentUser.from}
               </p>
             </div>
-            <div className='flex flex-col justify-center items-center gap-4'>
+            <div className='flex justify-center items-center gap-4'>
               <button onClick={handleProfileEdit} className='btn-gradient font-semibold text-lg cursor-pointer hover:scale-105'>
                 Edit Profile
               </button>
