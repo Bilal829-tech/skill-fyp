@@ -1,12 +1,12 @@
 // import { Routes, Route } from "react-router-dom"
 // import Home from "./pages/home.tsx"
-// import Dashboard from "./pages/dashboard.tsx"
+import Dashboard from "./pages/dashboard.tsx"
 // import Login from "./pages/Login.tsx"
 // import SignUp from "./pages/signUp.tsx"
 // import Profile from "./pages/profile.tsx"
 // import Skills from "./pages/skills.tsx"
 // import Users from "./pages/users.tsx" 
-import SwapDetail from "./pages/SwapDetail.tsx"
+// import SwapDetail from "./pages/SwapDetail.tsx"
 // import Profile from "./pages/profile.tsx"
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
     //   <Route path="/swaps" element={<Swaps />} />
     //   <Route path="/users" element={<Users />} />
     // </Routes>
-    <SwapDetail />
+    <Dashboard />
 
   )
 }
