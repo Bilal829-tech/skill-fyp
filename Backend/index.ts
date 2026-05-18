@@ -1,6 +1,8 @@
+
+
 (
-    function (a:number,b:number)   
+    function multiply (a:number,b:number)   
     {
-        return a+b;
+        return a*b;
     }
 )(2,3)
