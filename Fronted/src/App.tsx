@@ -7,7 +7,8 @@ import Dashboard from "./pages/dashboard.tsx"
 // import Skills from "./pages/skills.tsx"
 // import Users from "./pages/users.tsx" 
 // import SwapDetail from "./pages/SwapDetail.tsx"
-// import Profile from "./pages/profile.tsx"
+// import Profile from "./pages/profile.
+
 
 function App() {
   return (
